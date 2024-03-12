@@ -1,5 +1,8 @@
 # CartServiceFS
 
+This is a Project that shows basic API creation. I have implemented my own APIs for a Cart Service using FakeStore API Data.
+
+
 
 <img width="1440" alt="Screenshot 2024-03-12 at 4 33 21 PM" src="https://github.com/pradyutf/CartServiceFS/assets/145162667/ee24ba93-3763-4d91-b477-8a44d580d1c9">
 <img width="1440" alt="Screenshot 2024-03-12 at 4 43 42 PM" src="https://github.com/pradyutf/CartServiceFS/assets/145162667/a2633704-0a06-4174-a5c5-3c48313422ff">
