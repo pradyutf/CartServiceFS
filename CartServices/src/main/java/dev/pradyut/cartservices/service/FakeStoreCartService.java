@@ -121,4 +121,29 @@ public class FakeStoreCartService implements CartService {
         }
         return cartList;
     }
+
+
+
+    //get cart in a particular date range
+    public List<Cart> getCartsinDate(String startdate, String enddate) {
+        FakeStoreCartDto[]  listOfDateCarts = restTemplate.getForObject(
+                "https://fakestoreapi.com/carts?startdate="+startdate+"&enddate="+enddate,
+                FakeStoreCartDto[].class
+        );
+
+        ArrayList<Cart> cartListDate = new ArrayList<>();
+        for(int i = 0; i<(Objects.requireNonNull(listOfDateCarts)).length; i++){
+            Cart newCart = new Cart();
+            FakeStoreCartDto temp = listOfDateCarts[i];
+            newCart.setId(temp.getId());
+            newCart.setUserId(temp.getUserId());
+            newCart.setDate(temp.getDate());
+            newCart.setProducts(temp.getProducts());
+
+            cartListDate.add(newCart);
+        }
+        return cartListDate;
+
+
+    }
 }

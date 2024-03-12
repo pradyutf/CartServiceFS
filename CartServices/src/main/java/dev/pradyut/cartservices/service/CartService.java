@@ -13,4 +13,5 @@ public interface CartService {
     void updateCart(Cart cart,Long id);
     void deleteCart(Long id);
     List<Cart> getCartsofUser(Long userId);
+    List<Cart> getCartsinDate(String startdate, String enddate);
 }

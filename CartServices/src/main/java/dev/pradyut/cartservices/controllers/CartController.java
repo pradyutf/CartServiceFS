@@ -57,6 +57,13 @@ public class CartController {
     @GetMapping("/carts/user/{userId}")
     public List<Cart> getCartsofUser(@PathVariable("userId") Long userId){
         return cartService.getCartsofUser(userId);
+
+    }
+
+    @GetMapping("/carts?startdate={startdate}&enddate={enddate}")
+    public List<Cart> getCartsinDate(@RequestParam("startdate") String startdate,
+                              @RequestParam("enddate") String enddate){
+        return cartService.getCartsinDate(startdate,enddate);
     }
 
 
